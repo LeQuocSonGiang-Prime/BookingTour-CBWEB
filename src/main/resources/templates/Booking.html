@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<h2 th:text="${tour.get().description}">dac tour </h2>
+
+<form>
+    <h3>Thong tin khach hang</h3>
+   <div>
+       <label for="name">Ho ten</label>
+       <input type="text" id="name">
+   </div>
+    <div>
+        <label for="address">Dia Chi</label>
+        <input type="text" id="address">
+    </div>
+   <div>
+       <label for="email">Email</label>
+       <input type="text" id="email">
+   </div>
+    <div>
+        <label for="phone">Phone</label>
+        <input type="text" id="phone">
+    </div>
+
+    <h3>Thong tin Chuyen di</h3>
+    <div>
+        <label for="time-start">Ngay Khoi hanh</label>
+        <input type="text" id="time-start">
+    </div>
+    <div>
+        <label for="adult">So nguoi lon</label>
+        <input type="text" id="adult">
+    </div>
+    <div>
+        <label for="younger">So tre em</label>
+        <input type="text" id="younger">
+    </div>
+    <div>
+        <label for="phone">Phone</label>
+        <input type="text" id="phone">
+    </div>
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Chuong trinh chi tiet</h2>
+    <h2 th:text= "${tour.get().description}"></h2>
+
+<div>
+    <button type="button" th:onclick="'window.location.href = \'/booking-tour/booking/' + ${tour.get().id}+ '\''" >Dat tour</button>
+    <a th:href="@{/booking-tour/tour/views}">List Tour</a>
+</div>
+
+</body>
+</html>

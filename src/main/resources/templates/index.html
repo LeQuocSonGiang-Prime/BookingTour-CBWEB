@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+
+<h2>HTML Table</h2>
+
+<table>
+    <tr>
+        <th>Chương trình</th>
+        <th>Lịch khởi hành</th>
+        <th>Gía</th>
+        <th>Đặt</th>
+    </tr>
+
+
+    <tr th:each="tour : ${listTour}">
+        <td th:text="${tour.description}"></td>
+        <td th:text="${tour.departureSchedule}"></td>
+        <td th:text="${tour.price}"></td>
+
+        <td>
+            <form>
+                <button type="button"
+                        th:onclick="'window.location.href = \'/booking-tour/tour/views/' + ${tour.id}+ '\''"
+                >Dat Tour</button>
+            </form>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
