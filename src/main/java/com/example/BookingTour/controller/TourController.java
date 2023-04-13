@@ -1,5 +1,6 @@
 package com.example.BookingTour.controller;
 
+import com.example.BookingTour.model.Booking;
 import com.example.BookingTour.model.ResponseObject;
 import com.example.BookingTour.model.Tour;
 import com.example.BookingTour.repositories.TourRepository;

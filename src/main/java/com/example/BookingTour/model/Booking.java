@@ -21,7 +21,7 @@ public class Booking {
     @ManyToOne
     @JoinColumn(name = "tour_id")
     private Tour tour;
-    private Date departureDate;
+    private String departureDate;
     private int noAdults;
     private int noChildren;
 

@@ -37,11 +37,15 @@ public class BookingController {
     public ModelAndView bookingView(@PathVariable Long id) {
         ModelAndView modelAndView = new ModelAndView("Booking");
         Optional<Tour> t = tourService.getTourById(id);
+        Booking booking = new Booking(); // create new instance of Booking
+        modelAndView.addObject("booking", booking);
         modelAndView.addObject("tour", t);
         return modelAndView;
     }
-    @PostMapping("/save-booking")
-    public void saceBooking(@PathVariable Long id){
-        String name =
+    @PostMapping("/save-booking/{id}")
+    public ModelAndView save(@ModelAttribute("booking") Booking booking, @PathVariable Long id){
+        ModelAndView modelAndView = new ModelAndView("successfully");
+
+        return modelAndView;
     }
 }
